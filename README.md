@@ -6,7 +6,7 @@ SIGMA es una propuesta tecnológica orientada a facilitar la comunicación entre
 
 El proyecto busca reducir las barreras de comunicación mediante una solución digital accesible, intuitiva y fácil de utilizar.
 
-Como parte del desarrollo del proyecto, se elaboró una Landing Page que presenta la propuesta de SIGMA, sus principales beneficios y las características generales de la solución.
+Como parte de su desarrollo, se elaboró una Landing Page que presenta la propuesta de SIGMA, sus objetivos, beneficios, funcionamiento propuesto y compromiso con la comunicación inclusiva.
 
 ## Integrantes del Equipo
 
@@ -30,37 +30,43 @@ SIGMA está dirigido a:
 ## Principales Características
 
 ### Comunicación Inclusiva
-
-Busca facilitar la interacción entre personas con discapacidad auditiva y personas que no conocen la lengua de señas.
+Busca facilitar la interacción entre personas sordas y oyentes mediante una propuesta tecnológica orientada a la comunicación accesible.
 
 ### Interfaz Accesible
+Presenta una interfaz sencilla, intuitiva y organizada para facilitar la navegación y mejorar la experiencia de los usuarios.
 
-Presenta una propuesta de interfaz sencilla, intuitiva y orientada a mejorar la experiencia de los usuarios.
-
-### Presentación de la Solución
-
-La Landing Page permite conocer el propósito de SIGMA, su funcionamiento propuesto y sus beneficios.
+### Funcionamiento de SIGMA
+Incluye una sección dedicada a explicar la propuesta de funcionamiento de la solución y su enfoque en la comunicación inclusiva.
 
 ### Navegación por Secciones
+La Landing Page cuenta con diferentes páginas y secciones:
 
-Permite explorar las secciones de Inicio, ¿Cómo funciona?, Beneficios, Nosotros, Portafolio y Novedades.
+- Inicio.
+- Beneficios.
+- Funcionamiento.
+- Nosotros.
+- Contacto.
+- Novedades.
+- Portafolio.
+
+### Recursos Audiovisuales
+Incorpora imágenes, ilustraciones y videos animados para explicar los avances, el diseño inclusivo y el compromiso de SIGMA.
 
 ### Diseño Visual
-
-Utiliza una identidad visual basada en los colores azul y turquesa, imágenes representativas y una organización clara de la información.
+Utiliza una identidad visual basada principalmente en los colores azul y turquesa, con elementos gráficos modernos y una organización clara de la información.
 
 ## Tecnologías Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
-- WebStorm
-- Git
-- GitHub
-- GitHub Pages
-- GitHub Actions
-- Google Fonts
-- Lucide Icons
+- HTML5.
+- CSS3.
+- JavaScript.
+- Visual Studio Code.
+- Git.
+- GitHub.
+- GitHub Pages.
+- GitHub Actions.
+- Google Fonts.
+- Lucide Icons.
 
 ## Estructura del Proyecto
 
@@ -76,28 +82,32 @@ Sigma-LandingPage-GitHub/
 │
 └── public/
     ├── index.html
-    ├── favicon.ico
+    ├── beneficios.html
+    ├── contacto.html
+    ├── funcionamiento.html
+    ├── nosotros.html
+    ├── novedades.html
+    ├── portafolio.html
     │
+    ├── favicon.ico
     ├── favicon_io/
-    │   ├── android-chrome-192x192.png
-    │   ├── android-chrome-512x512.png
-    │   ├── apple-touch-icon.png
-    │   ├── favicon-16x16.png
-    │   ├── favicon-32x32.png
-    │   └── site.webmanifest
     │
     └── assets/
+        ├── images/
+        │   └── Imágenes e ilustraciones de SIGMA
+        │
+        ├── scripts/
+        │   └── main.js
+        │
         ├── styles/
         │   └── styles.css
         │
-        ├── images/
-        │   ├── celular-sigma.png
-        │   ├── logo-sigma-blanco.png
-        │   ├── logo-sigma.png
-        │   └── manos-sigma.png
-        │
-        └── scripts/
-            └── main.js
+        └── videos/
+            ├── demo-video.mp4
+            ├── video-avances.mp4
+            ├── video-compromiso.mp4
+            ├── video-diseno-inclusivo.mp4
+            └── video-presentacion-sigma.mp4
 ```
 
 ## Página Web
@@ -120,4 +130,6 @@ Asimismo, se configuró GitHub Actions mediante el archivo `deploy.yml`, permiti
 
 Landing Page desarrollada como parte del proyecto académico SIGMA, orientado a promover la accesibilidad y reducir las barreras de comunicación.
 
-El sitio web presenta la propuesta de solución y sus principales características. Las funcionalidades de la aplicación SIGMA se encuentran planteadas como parte del desarrollo del proyecto.
+El sitio web presenta la propuesta de solución, sus principales características, beneficios, recursos audiovisuales y compromiso con la comunicación inclusiva.
+
+Las funcionalidades de la aplicación SIGMA se encuentran planteadas como parte del desarrollo del proyecto.
