@@ -116,7 +116,7 @@ La Landing Page de SIGMA se encuentra publicada mediante GitHub Pages.
 
 **Enlace de acceso:**
 
-https://sigma-ihc.github.io/Sigma-LandingPage/
+https://sigma-ihc.github.io/
 
 ## Control de Versiones y Despliegue
 
