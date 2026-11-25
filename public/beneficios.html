@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficios - SIGMA</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo-sigma.png" alt="Logo de SIGMA">
+            </a>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="funcionamiento.html">¿Cómo funciona?</a>
+            <a href="beneficios.html" class="activo" aria-current="page">Beneficios</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="portafolio.html">Portafolio</a>
+            <a href="novedades.html">Novedades</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <button type="button" onclick="abrirLogin()">Iniciar sesión</button>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="pagina-beneficios">
+
+        <!-- PORTADA -->
+        <section class="beneficios-portada">
+            <div class="beneficios-portada-texto">
+                <span class="beneficios-etiqueta">Beneficios de SIGMA</span>
+                <h1>Una comunicación más inclusiva y accesible</h1>
+                <p>Descubre las ventajas de usar SIGMA en tu día a día.</p>
+            </div>
+
+            <div class="beneficios-hero-arte">
+                <img
+                    src="assets/images/personas-comunicacion-sigma.png"
+                    alt="Jóvenes comunicándose mediante lengua de señas">
+            </div>
+        </section>
+
+        <!-- NUESTROS BENEFICIOS -->
+        <section class="beneficios-seccion">
+            <div class="beneficios-titulo">
+                <h2>Nuestros beneficios</h2>
+                <p>Una herramienta pensada para una comunicación más inclusiva.</p>
+            </div>
+
+            <div class="lista-beneficios">
+                <article class="beneficio">
+                    <div class="beneficio-icono">
+                        <i data-lucide="accessibility"></i>
+                    </div>
+                    <h3>Comunicación accesible</h3>
+                    <p>Facilita la comunicación entre personas sordas y oyentes.</p>
+                </article>
+
+                <article class="beneficio">
+                    <div class="beneficio-icono">
+                        <i data-lucide="user-round"></i>
+                    </div>
+                    <h3>Mayor autonomía</h3>
+                    <p>Permite comunicarse de manera más independiente y sencilla.</p>
+                </article>
+
+                <article class="beneficio">
+                    <div class="beneficio-icono">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3>Interfaz sencilla</h3>
+                    <p>Un diseño intuitivo, claro y fácil de utilizar.</p>
+                </article>
+
+                <article class="beneficio">
+                    <div class="beneficio-icono">
+                        <i data-lucide="messages-square"></i>
+                    </div>
+                    <h3>Comunicación bidireccional</h3>
+                    <p>Permite que ambas personas puedan comunicarse y responder.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- VENTAJAS DE UTILIZAR SIGMA -->
+        <section class="ventajas-sigma">
+
+            <div class="ventajas-arte">
+                <img
+                    src="assets/images/laptop-comunicacion-sigma.png"
+                    alt="Laptop con manos comunicándose mediante lengua de señas">
+            </div>
+
+            <div class="ventajas-contenido">
+                <h2>Ventajas de utilizar SIGMA</h2>
+                <p>Más que una herramienta, es un apoyo para una comunicación sin barreras.</p>
+
+                <ul>
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        Comunicación más directa y efectiva.
+                    </li>
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        Facilidad de uso en cualquier momento.
+                    </li>
+                    <li>
+                        <i data-lucide="check-circle-2"></i>
+                        Mayor independencia en distintas situaciones.
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- QUIÉNES SE BENEFICIAN -->
+        <section class="beneficiarios-seccion">
+            <div class="beneficios-titulo">
+                <h2>¿Quiénes se benefician?</h2>
+                <p>SIGMA está pensada para diversas personas y espacios.</p>
+            </div>
+
+            <div class="beneficiarios-grid">
+                <article class="beneficiario-card">
+                    <div class="beneficiario-icono">
+                        <i data-lucide="hand"></i>
+                    </div>
+                    <div>
+                        <h3>Personas sordas</h3>
+                        <p>Les brinda una forma más accesible de comunicarse con personas oyentes.</p>
+                    </div>
+                </article>
+
+                <article class="beneficiario-card">
+                    <div class="beneficiario-icono">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div>
+                        <h3>Personas oyentes</h3>
+                        <p>Les permite interactuar de manera inclusiva con la comunidad sorda.</p>
+                    </div>
+                </article>
+
+                <article class="beneficiario-card">
+                    <div class="beneficiario-icono">
+                        <i data-lucide="building-2"></i>
+                    </div>
+                    <div>
+                        <h3>Instituciones</h3>
+                        <p>Puede facilitar la atención y la comunicación en espacios educativos, públicos y privados.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section id="testimonios" class="testimonios">
+            <div class="beneficios-titulo">
+                <h2>Lo que dicen nuestros usuarios</h2>
+                <p>Historias y opiniones sobre la importancia de una comunicación accesible.</p>
+            </div>
+
+            <div class="lista-testimonios">
+                <article class="testimonio">
+                    <div class="testimonio-icono">
+                        <i data-lucide="user-round"></i>
+                    </div>
+                    <div>
+                        <p>"La escritura en la página hace que la comunicación sea más lenta"</p>
+                        <h3>María Fernández</h3>
+                    </div>
+                </article>
+
+                <article class="testimonio">
+                    <div class="testimonio-icono">
+                        <i data-lucide="user-round"></i>
+                    </div>
+                    <div>
+                        <p>"Sería útil contar con una herramienta que traduzca en tiempo real"</p>
+                        <h3>Carlos Rojas</h3>
+                    </div>
+                </article>
+
+                <article class="testimonio">
+                    <div class="testimonio-icono">
+                        <i data-lucide="user-round"></i>
+                    </div>
+                    <div>
+                        <p>"Una herramienta tecnológica podría facilitar la atención en espacios públicos"</p>
+                        <h3>Lucía Torres</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="beneficios-cierre">
+            <div class="cierre-texto">
+                <h2>La comunicación nos une</h2>
+                <p>Con SIGMA, damos un paso más hacia una sociedad más inclusiva, equitativa y conectada.</p>
+            </div>
+
+            <a href="nosotros.html">
+                Conocer SIGMA <span>→</span>
+            </a>
+
+            <div class="cierre-ilustracion">
+            <img src="assets/images/manos-finales.png"
+                alt="Manos formando un corazón">
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-sigma-blanco.png" alt="Logo de SIGMA">
+                </a>
+            </div>
+
+            <nav class="footer-navegacion" aria-label="Navegación del pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="funcionamiento.html">¿Cómo funciona?</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="portafolio.html">Portafolio</a>
+                <a href="novedades.html">Novedades</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="footer-contacto">
+                <h3>Contáctanos</h3>
+                <p>
+                    <i data-lucide="phone"></i>
+                    +51 999 999 999
+                </p>
+                <p>
+                    <i data-lucide="instagram"></i>
+                    SIGMA.PE
+                </p>
+                <p>
+                    <i data-lucide="facebook"></i>
+                    SIGMA.PE
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-inferior">
+            <p>© 2026 SIGMA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <div id="modal-login" class="modal-login" hidden>
+        <div class="login-contenido" role="dialog" aria-modal="true" aria-labelledby="login-titulo">
+            <button type="button" class="cerrar-login" onclick="cerrarLogin()" aria-label="Cerrar ventana">×</button>
+
+            <img class="login-logo" src="assets/images/logo-sigma.png" alt="Logo de SIGMA">
+
+            <h2 id="login-titulo">Iniciar sesión</h2>
+            <p class="login-bienvenida">Bienvenido a SIGMA</p>
+
+            <form id="form-login">
+                <label for="correo">Correo electrónico</label>
+                <div class="campo-login">
+                    <i data-lucide="mail"></i>
+                    <input type="email" id="correo" placeholder="Ingresa tu correo" autocomplete="email" required>
+                </div>
+
+                <label for="contrasena">Contraseña</label>
+                <div class="campo-login campo-contrasena">
+                    <i data-lucide="lock-keyhole"></i>
+                    <input type="password" id="contrasena" placeholder="Ingresa tu contraseña" autocomplete="current-password" required>
+
+                    <button type="button" class="mostrar-contrasena" onclick="alternarContrasena()" aria-label="Mostrar contraseña">
+                        <i data-lucide="eye"></i>
+                    </button>
+                </div>
+
+                <button type="submit" class="boton-ingresar">Ingresar</button>
+            </form>
+
+            <p class="login-enlace">
+                <button type="button" class="enlace-texto" onclick="abrirRecuperacion()">¿Olvidaste tu contraseña?</button>
+            </p>
+
+            <p class="login-registro">
+                ¿No tienes cuenta?
+                <button type="button" class="enlace-texto" onclick="abrirRegistro()">Regístrate</button>
+            </p>
+
+            <div class="login-aviso">
+                <i data-lucide="info"></i>
+                <p>Inicio de sesión de demostración. Próximamente estará disponible la autenticación de usuarios.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal-registro" class="modal-login" hidden>
+        <div class="login-contenido" role="dialog" aria-modal="true" aria-labelledby="registro-titulo">
+            <button type="button" class="cerrar-login" onclick="cerrarRegistro()" aria-label="Cerrar registro">×</button>
+
+            <h2 id="registro-titulo">Crear una cuenta</h2>
+            <p>Bienvenido a la comunidad SIGMA</p>
+
+            <form id="form-registro">
+                <label for="registro-nombre">Nombre completo</label>
+                <input type="text" id="registro-nombre" placeholder="Ingresa tu nombre" autocomplete="name" required>
+
+                <label for="registro-correo">Correo electrónico</label>
+                <input type="email" id="registro-correo" placeholder="Ingresa tu correo" autocomplete="email" required>
+
+                <label for="registro-contrasena">Contraseña</label>
+                <input type="password" id="registro-contrasena" placeholder="Crea una contraseña" autocomplete="new-password" minlength="8" required>
+
+                <button type="submit" class="boton-ingresar">Registrarse</button>
+            </form>
+
+            <p class="login-enlace">
+                ¿Ya tienes cuenta?
+                <button type="button" class="enlace-texto" onclick="volverLogin()">Inicia sesión</button>
+            </p>
+
+            <p class="login-aviso">Esta es una demostración. No se crearán cuentas reales.</p>
+        </div>
+    </div>
+    <div id="modal-recuperacion" class="modal-login" hidden>
+        <div class="login-contenido" role="dialog" aria-modal="true" aria-labelledby="recuperacion-titulo">
+            <button type="button" class="cerrar-login" onclick="cerrarRecuperacion()" aria-label="Cerrar recuperación">×</button>
+
+            <h2 id="recuperacion-titulo">Recuperar contraseña</h2>
+            <p>Ingresa tu correo electrónico para solicitar la recuperación de tu cuenta.</p>
+
+            <form id="form-recuperacion">
+                <label for="recuperacion-correo">Correo electrónico</label>
+                <input type="email" id="recuperacion-correo" placeholder="Ingresa tu correo" autocomplete="email" required>
+
+                <button type="submit" class="boton-ingresar">Recuperar contraseña</button>
+            </form>
+
+            <p class="login-enlace">
+                <button type="button" class="enlace-texto" onclick="volverDesdeRecuperacion()">Volver a iniciar sesión</button>
+            </p>
+
+            <p class="login-aviso">Demostración: no se enviarán correos de recuperación reales.</p>
+        </div>
+    </div>
+    <script src="assets/scripts/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

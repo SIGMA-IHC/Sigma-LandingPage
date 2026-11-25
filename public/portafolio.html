@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGMA - Portafolio</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo-sigma.png" alt="Logo de SIGMA">
+            </a>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="funcionamiento.html">¿Cómo funciona?</a>
+            <a href="beneficios.html">Beneficios</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="portafolio.html" class="activo" aria-current="page">Portafolio</a>
+            <a href="novedades.html">Novedades</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <button type="button" onclick="abrirLogin()">Iniciar sesión</button>
+    </header>
+
+    <main>
+
+        <section id="portafolio" class="portafolio">
+
+            <h2>Nuestro portafolio</h2>
+
+            <p class="portafolio-subtitulo">
+                Conoce nuestro proyecto SIGMA y nuestra propuesta
+                para una comunicación sin barreras.
+            </p>
+
+            <article class="portafolio-tarjeta">
+
+                <div class="portafolio-imagen">
+                    <img src="assets/images/celular-sigma(03).png" alt="Aplicación SIGMA en un celular">
+                </div>
+
+                <div class="portafolio-contenido">
+                    <h3>SIGMA - Comunicación sin barreras</h3>
+
+                    <p>
+                        SIGMA es una propuesta tecnológica que busca
+                        facilitar la comunicación entre personas con
+                        discapacidad auditiva y personas que no conocen
+                        la lengua de señas.
+                    </p>
+
+                    <a href="funcionamiento.html" class="portafolio-boton">
+                        Conocer cómo funciona
+                    </a>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="portafolio-caracteristicas">
+
+            <div class="portafolio-encabezado">
+                <h2>¿Qué ofrece SIGMA?</h2>
+                <p>
+                    Conoce los principales elementos de nuestra propuesta tecnológica.
+                </p>
+            </div>
+
+            <div class="portafolio-grid">
+
+                <article class="portafolio-card">
+                    <div class="portafolio-icono">
+                        <i data-lucide="hand"></i>
+                    </div>
+                    <h3>Reconocimiento de señas</h3>
+                    <p>
+                        La propuesta busca captar los movimientos realizados
+                        mediante una cámara.
+                    </p>
+                </article>
+
+                <article class="portafolio-card">
+                    <div class="portafolio-icono">
+                        <i data-lucide="message-square-text"></i>
+                    </div>
+                    <h3>Conversión a texto</h3>
+                    <p>
+                        Busca representar mediante texto los mensajes
+                        expresados en lengua de señas.
+                    </p>
+                </article>
+
+                <article class="portafolio-card">
+                    <div class="portafolio-icono">
+                        <i data-lucide="accessibility"></i>
+                    </div>
+                    <h3>Accesibilidad</h3>
+                    <p>
+                        Propone una experiencia sencilla y accesible
+                        para facilitar la comunicación.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="portafolio-objetivos">
+
+            <div class="portafolio-objetivos-imagen">
+                <img src="assets/images/proposito-sigma.png" alt="Propósito de SIGMA: inclusión, autonomía e innovación">
+            </div>
+
+            <div class="portafolio-objetivos-contenido">
+
+                <h2>Nuestro propósito</h2>
+
+                <p>
+                    En SIGMA buscamos aprovechar la tecnología para
+                    reducir las barreras de comunicación y promover
+                    una sociedad más inclusiva.
+                </p>
+
+                <div class="portafolio-objetivo">
+                    <i data-lucide="check-circle"></i>
+                    <div>
+                        <h3>Inclusión</h3>
+                        <p>Promover una comunicación accesible para todos.</p>
+                    </div>
+                </div>
+
+                <div class="portafolio-objetivo">
+                    <i data-lucide="check-circle"></i>
+                    <div>
+                        <h3>Autonomía</h3>
+                        <p>Facilitar una comunicación más independiente.</p>
+                    </div>
+                </div>
+
+                <div class="portafolio-objetivo">
+                    <i data-lucide="check-circle"></i>
+                    <div>
+                        <h3>Innovación</h3>
+                        <p>Utilizar la tecnología como herramienta de inclusión.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="portafolio-proceso">
+
+            <div class="portafolio-encabezado">
+                <h2>Proceso de desarrollo</h2>
+                <p>
+                    Las etapas que orientan la construcción de nuestra propuesta.
+                </p>
+            </div>
+
+            <div class="portafolio-proceso-grid">
+
+                <article class="portafolio-etapa">
+                    <span>01</span>
+                    <i data-lucide="palette"></i>
+                    <h3>Diseño</h3>
+                    <p>
+                        Definición de la interfaz y organización
+                        de los elementos visuales de SIGMA.
+                    </p>
+                </article>
+
+                <article class="portafolio-etapa">
+                    <span>02</span>
+                    <i data-lucide="code"></i>
+                    <h3>Desarrollo</h3>
+                    <p>
+                        Construcción de la interfaz y las funcionalidades
+                        planteadas para el proyecto.
+                    </p>
+                </article>
+
+                <article class="portafolio-etapa">
+                    <span>03</span>
+                    <i data-lucide="clipboard-check"></i>
+                    <h3>Pruebas</h3>
+                    <p>
+                        Revisión del funcionamiento y de la experiencia
+                        de uso de la propuesta.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="portafolio-galeria">
+
+            <div class="portafolio-encabezado">
+                <h2>Galería del proyecto</h2>
+                <p>
+                    Algunos elementos visuales que representan nuestra propuesta.
+                </p>
+            </div>
+
+            <div class="portafolio-galeria-grid">
+
+                <article class="portafolio-galeria-item">
+                    <img src="assets/images/celular-sigma(02).png" alt="Presentación de la aplicación SIGMA">
+                    <div>
+                        <h3>Aplicación SIGMA</h3>
+                        <p>Propuesta de interfaz tecnológica.</p>
+                    </div>
+                </article>
+
+                <article class="portafolio-galeria-item">
+                    <img src="assets/images/manos-sigma (2).png" alt="Ilustración de comunicación mediante señas">
+                    <div>
+                        <h3>Lengua de señas</h3>
+                        <p>Comunicación e inclusión.</p>
+                    </div>
+                </article>
+
+                <article class="portafolio-galeria-item">
+                    <img src="assets/images/inclusion-sigma.png" alt="Tecnología e inclusión educativa">
+                    <div>
+                        <h3>Tecnología e inclusión</h3>
+                        <p>Una propuesta para promover la comunicación accesible.</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="portafolio-final">
+
+            <h2>Construyamos una comunicación sin barreras</h2>
+
+            <p>
+                Conoce más sobre nuestra propuesta y descubre
+                cómo buscamos facilitar la comunicación.
+            </p>
+
+            <a href="funcionamiento.html" class="portafolio-boton-final">
+                Descubrir cómo funciona
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-sigma-blanco.png" alt="Logo de SIGMA">
+                </a>
+            </div>
+
+            <nav class="footer-navegacion" aria-label="Navegación del pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="funcionamiento.html">¿Cómo funciona?</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="portafolio.html">Portafolio</a>
+                <a href="novedades.html">Novedades</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="footer-contacto">
+                <h3>Contáctanos</h3>
+
+                <p>
+                    <i data-lucide="phone"></i>
+                    +51 999 999 999
+                </p>
+
+                <p>
+                    <i data-lucide="instagram"></i>
+                    SIGMA.PE
+                </p>
+
+                <p>
+                    <i data-lucide="facebook"></i>
+                    SIGMA.PE
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+            <p>© 2026 SIGMA. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+    <div id="modal-login" class="modal-login" hidden>
+
+        <div class="login-contenido" role="dialog" aria-modal="true" aria-labelledby="login-titulo">
+
+            <button type="button" class="cerrar-login" onclick="cerrarLogin()" aria-label="Cerrar ventana">×</button>
+
+            <img class="login-logo" src="assets/images/logo-sigma.png" alt="Logo de SIGMA">
+
+            <h2 id="login-titulo">Iniciar sesión</h2>
+            <p class="login-bienvenida">Bienvenido a SIGMA</p>
+
+            <form id="form-login">
+
+                <label for="correo">Correo electrónico</label>
+
+                <div class="campo-login">
+                    <i data-lucide="mail"></i>
+                    <input type="email" id="correo" placeholder="Ingresa tu correo" autocomplete="email" required>
+                </div>
+
+                <label for="contrasena">Contraseña</label>
+
+                <div class="campo-login campo-contrasena">
+                    <i data-lucide="lock-keyhole"></i>
+
+                    <input type="password" id="contrasena" placeholder="Ingresa tu contraseña" autocomplete="current-password" required>
+
+                    <button type="button" class="mostrar-contrasena" onclick="alternarContrasena()" aria-label="Mostrar contraseña">
+                        <i data-lucide="eye"></i>
+                    </button>
+                </div>
+
+                <button type="submit" class="boton-ingresar">Ingresar</button>
+
+            </form>
+
+            <p class="login-enlace">
+                <button type="button" class="enlace-texto" onclick="abrirRecuperacion()">¿Olvidaste tu contraseña?</button>
+            </p>
+
+            <p class="login-registro">
+                ¿No tienes cuenta?
+                <button type="button" class="enlace-texto" onclick="abrirRegistro()">Regístrate</button>
+            </p>
+
+            <div class="login-aviso">
+                <i data-lucide="info"></i>
+                <p>Inicio de sesión de demostración. Próximamente estará disponible la autenticación de usuarios.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="modal-registro" class="modal-login" hidden>
+
+        <div class="login-contenido" role="dialog" aria-modal="true" aria-labelledby="registro-titulo">
+
+            <button type="button" class="cerrar-login" onclick="cerrarRegistro()" aria-label="Cerrar registro">×</button>
+
+            <h2 id="registro-titulo">Crear una cuenta</h2>
+            <p>Bienvenido a la comunidad SIGMA</p>
+
+            <form id="form-registro">
+
+                <label for="registro-nombre">Nombre completo</label>
+                <input type="text" id="registro-nombre" placeholder="Ingresa tu nombre" autocomplete="name" required>
+
+                <label for="registro-correo">Correo electrónico</label>
+                <input type="email" id="registro-correo" placeholder="Ingresa tu correo" autocomplete="email" required>
+
+                <label for="registro-contrasena">Contraseña</label>
+                <input type="password" id="registro-contrasena" placeholder="Crea una contraseña" autocomplete="new-password" minlength="8" required>
+
+                <button type="submit" class="boton-ingresar">Registrarse</button>
+
+            </form>
+
+            <p class="login-enlace">
+                ¿Ya tienes cuenta?
+                <button type="button" class="enlace-texto" onclick="volverLogin()">Inicia sesión</button>
+            </p>
+
+            <p class="login-aviso">Esta es una demostración. No se crearán cuentas reales.</p>
+
+        </div>
+
+    </div>
+
+    <div id="modal-recuperacion" class="modal-login" hidden>
+
+        <div class="login-contenido" role="dialog" aria-modal="true" aria-labelledby="recuperacion-titulo">
+
+            <button type="button" class="cerrar-login" onclick="cerrarRecuperacion()" aria-label="Cerrar recuperación">×</button>
+
+            <h2 id="recuperacion-titulo">Recuperar contraseña</h2>
+            <p>Ingresa tu correo electrónico para solicitar la recuperación de tu cuenta.</p>
+
+            <form id="form-recuperacion">
+
+                <label for="recuperacion-correo">Correo electrónico</label>
+                <input type="email" id="recuperacion-correo" placeholder="Ingresa tu correo" autocomplete="email" required>
+
+                <button type="submit" class="boton-ingresar">Recuperar contraseña</button>
+
+            </form>
+
+            <p class="login-enlace">
+                <button type="button" class="enlace-texto" onclick="volverDesdeRecuperacion()">Volver a iniciar sesión</button>
+            </p>
+
+            <p class="login-aviso">Demostración: no se enviarán correos de recuperación reales.</p>
+
+        </div>
+
+    </div>
+
+    <script src="assets/scripts/main.js"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

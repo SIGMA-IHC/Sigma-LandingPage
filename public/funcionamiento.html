@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cómo funciona? - SIGMA</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo-sigma.png" alt="Logo de SIGMA">
+            </a>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="funcionamiento.html" class="activo" aria-current="page">¿Cómo funciona?</a>
+            <a href="beneficios.html">Beneficios</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="portafolio.html">Portafolio</a>
+            <a href="novedades.html">Novedades</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <button type="button" onclick="abrirLogin()">Iniciar sesión</button>
+    </header>
+
+    <main>
+
+        <section id="funcionamiento" class="funcionamiento">
+            <h2>¿Cómo funciona?</h2>
+
+            <div class="pasos">
+
+                <article class="paso">
+                    <span class="numero">01</span>
+                    <div class="icono-paso">
+                        <i data-lucide="camera"></i>
+                    </div>
+                    <h3>Activa tu cámara</h3>
+                    <p>Sigma utiliza la cámara de tu computadora para captar señas.</p>
+                </article>
+
+                <article class="paso">
+                    <span class="numero">02</span>
+                    <div class="icono-paso">
+                        <i data-lucide="message-square-text"></i>
+                    </div>
+                    <h3>Convierte a texto</h3>
+                    <p>Sigma reconoce las señas y las convierte en texto en pantalla.</p>
+                </article>
+
+                <article class="paso">
+                    <span class="numero">03</span>
+                    <div class="icono-paso">
+                        <i data-lucide="message-square"></i>
+                    </div>
+                    <h3>Comunícate</h3>
+                    <p>La otra persona puede leer el mensaje y responder fácilmente.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="demostracion" class="demostracion">
+
+            <div class="demo-encabezado">
+                <h2>Conoce SIGMA en acción</h2>
+                <p>Descubre cómo la tecnología puede facilitar una comunicación sin barreras.</p>
+            </div>
+
+            <div class="demo-contenido">
+
+                <div class="demo-video">
+                    <video controls poster="assets/images/portada-demo.png">
+                        <source src="videos/demo-video.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este video.
+                    </video>
+                </div>
+
+                <div class="demo-descripcion">
+                    <h3>La comunicación está al alcance de todos</h3>
+
+                    <p>
+                        SIGMA busca facilitar la comunicación entre
+                        personas sordas y oyentes mediante el
+                        reconocimiento de la lengua de señas.
+                    </p>
+
+                    <div class="demo-caracteristica">
+                        <i data-lucide="hand"></i>
+                        <span>Captura de señas</span>
+                    </div>
+
+                    <div class="demo-caracteristica">
+                        <i data-lucide="brain"></i>
+                        <span>Reconocimiento de movimientos</span>
+                    </div>
+
+                    <div class="demo-caracteristica">
+                        <i data-lucide="message-circle"></i>
+                        <span>Comunicación accesible</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-sigma-blanco.png" alt="Logo de SIGMA">
+                </a>
+            </div>
+
+            <nav class="footer-navegacion" aria-label="Navegación del pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="funcionamiento.html">¿Cómo funciona?</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="portafolio.html">Portafolio</a>
+                <a href="novedades.html">Novedades</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="footer-contacto">
+                <h3>Contáctanos</h3>
+
+                <p>
+                    <i data-lucide="phone"></i>
+                    +51 999 999 999
+                </p>
+
+                <p>
+                    <i data-lucide="instagram"></i>
+                    SIGMA.PE
+                </p>
+
+                <p>
+                    <i data-lucide="facebook"></i>
+                    SIGMA.PE
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+            <p>© 2026 SIGMA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="modal-login" class="modal-login" hidden>
+        <div class="login-contenido" role="dialog" aria-modal="true" aria-labelledby="login-titulo">
+
+            <button type="button" class="cerrar-login" onclick="cerrarLogin()" aria-label="Cerrar ventana">×</button>
+
+            <img class="login-logo" src="assets/images/logo-sigma.png" alt="Logo de SIGMA">
+
+            <h2 id="login-titulo">Iniciar sesión</h2>
+            <p class="login-bienvenida">Bienvenido a SIGMA</p>
+
+            <form id="form-login">
+                <label for="correo">Correo electrónico</label>
+
+                <div class="campo-login">
+                    <i data-lucide="mail"></i>
+                    <input type="email" id="correo" placeholder="Ingresa tu correo" autocomplete="email" required>
+                </div>
+
+                <label for="contrasena">Contraseña</label>
+
+                <div class="campo-login campo-contrasena">
+                    <i data-lucide="lock-keyhole"></i>
+                    <input type="password" id="contrasena" placeholder="Ingresa tu contraseña" autocomplete="current-password" required>
+
+                    <button type="button" class="mostrar-contrasena" onclick="alternarContrasena()" aria-label="Mostrar contraseña">
+                        <i data-lucide="eye"></i>
+                    </button>
+                </div>
+
+                <button type="submit" class="boton-ingresar">Ingresar</button>
+            </form>
+
+            <p class="login-enlace">
+                <button type="button" class="enlace-texto" onclick="abrirRecuperacion()">¿Olvidaste tu contraseña?</button>
+            </p>
+
+            <p class="login-registro">
+                ¿No tienes cuenta?
+                <button type="button" class="enlace-texto" onclick="abrirRegistro()">Regístrate</button>
+            </p>
+
+            <div class="login-aviso">
+                <i data-lucide="info"></i>
+                <p>Inicio de sesión de demostración. Próximamente estará disponible la autenticación de usuarios.</p>
+            </div>
+
+        </div>
+    </div>
+
+<div id="modal-registro" class="modal-login" hidden>
+    <div class="login-contenido" role="dialog" aria-modal="true" aria-labelledby="registro-titulo">
+
+        <button type="button" class="cerrar-login" onclick="cerrarRegistro()" aria-label="Cerrar registro">×</button>
+
+        <h2 id="registro-titulo">Crear una cuenta</h2>
+        <p>Bienvenido a la comunidad SIGMA</p>
+
+        <form id="form-registro">
+            <label for="registro-nombre">Nombre completo</label>
+            <input type="text" id="registro-nombre" placeholder="Ingresa tu nombre" autocomplete="name" required>
+
+            <label for="registro-correo">Correo electrónico</label>
+            <input type="email" id="registro-correo" placeholder="Ingresa tu correo" autocomplete="email" required>
+
+            <label for="registro-contrasena">Contraseña</label>
+            <input type="password" id="registro-contrasena" placeholder="Crea una contraseña" autocomplete="new-password" minlength="8" required>
+
+            <button type="submit" class="boton-ingresar">Registrarse</button>
+        </form>
+
+        <p class="login-enlace">
+            ¿Ya tienes cuenta?
+            <button type="button" class="enlace-texto" onclick="volverLogin()">Inicia sesión</button>
+        </p>
+
+        <p class="login-aviso">Esta es una demostración. No se crearán cuentas reales.</p>
+    </div>
+</div>
+
+<div id="modal-recuperacion" class="modal-login" hidden>
+    <div class="login-contenido" role="dialog" aria-modal="true" aria-labelledby="recuperacion-titulo">
+
+        <button type="button" class="cerrar-login" onclick="cerrarRecuperacion()" aria-label="Cerrar recuperación">×</button>
+
+        <h2 id="recuperacion-titulo">Recuperar contraseña</h2>
+        <p>Ingresa tu correo electrónico para solicitar la recuperación de tu cuenta.</p>
+
+        <form id="form-recuperacion">
+            <label for="recuperacion-correo">Correo electrónico</label>
+            <input type="email" id="recuperacion-correo" placeholder="Ingresa tu correo" autocomplete="email" required>
+
+            <button type="submit" class="boton-ingresar">Recuperar contraseña</button>
+        </form>
+
+        <p class="login-enlace">
+            <button type="button" class="enlace-texto" onclick="volverDesdeRecuperacion()">Volver a iniciar sesión</button>
+        </p>
+
+        <p class="login-aviso">Demostración: no se enviarán correos de recuperación reales.</p>
+    </div>
+</div>
+
+
+    <script src="assets/scripts/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
