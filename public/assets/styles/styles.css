@@ -4930,3 +4930,12 @@ header button:hover {
         box-sizing: border-box !important;
     }
 }
+#form-contacto button[type="submit"] {
+    background-color: #20A99A;
+    border-color: #20A99A;
+}
+
+#form-contacto button[type="submit"]:hover {
+    background-color: #2A9D8F;
+    border-color: #2A9D8F;
+}
