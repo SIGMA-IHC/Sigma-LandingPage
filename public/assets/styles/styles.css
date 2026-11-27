@@ -4939,3 +4939,50 @@ header button:hover {
     background-color: #2A9D8F;
     border-color: #2A9D8F;
 }
+
+@media screen and (max-width: 768px) {
+
+    .prueba-sigma .herramientas-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        padding: 0 12px;
+        box-sizing: border-box;
+        gap: 14px;
+    }
+
+    .prueba-sigma .herramienta-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 18px;
+        box-sizing: border-box;
+    }
+
+    .prueba-sigma .herramienta-card > div:last-child {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .prueba-sigma .herramienta-card h3,
+    .prueba-sigma .herramienta-card p {
+        overflow-wrap: anywhere;
+        max-width: 100%;
+    }
+
+    .prueba-sigma .herramienta-card input[type="file"] {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .prueba-sigma .herramienta-card img {
+        max-width: 100%;
+        height: auto;
+    }
+}
