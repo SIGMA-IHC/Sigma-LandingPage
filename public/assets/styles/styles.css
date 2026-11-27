@@ -4897,4 +4897,11 @@ header button:hover {
         white-space: nowrap;
     }
 }
-
+@media screen and (max-width: 768px) {
+    .prueba-sigma .prueba-hero img {
+        width: 320px !important;
+        max-width: 90% !important;
+        height: auto !important;
+        object-fit: contain;
+    }
+}
