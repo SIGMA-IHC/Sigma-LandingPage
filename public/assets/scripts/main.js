@@ -276,8 +276,34 @@ if (texto && botonVoz && selectorIdioma && selectorVoz) {
         "zh-TW": "Chino mandarín (Taiwán)"
     };
     
+
 function obtenerNombreIdioma(codigo) {
     const nombresEspeciales = {
+        "yue": "Cantonés",
+        "zh": "Chino mandarín",
+        "bs": "Bosnio",
+        "sr": "Serbio",
+        "kok": "Konkani",
+        "ks": "Cachemiro",
+        "sd": "Sindhi",
+        "sat": "Santali",
+        "pa": "Punyabí",
+        "su": "Sundanés",
+        "hi": "Hindi",
+        "as": "Asamés",
+        "brx": "Bodo",
+        "doi": "Dogri",
+        "mni": "Manipuri",
+        "mai": "Maithili",
+        "or": "Odia",
+        "sa": "Sánscrito",
+        "jv": "Javanés",
+        "cy": "Galés",
+        "mn": "Mongol",
+        "fil": "Filipino"
+    };
+
+    const variantes = {
         "yue-HK-#Hant": "Cantonés (Hong Kong)",
         "zh-CN-#Hans": "Chino mandarín (China, simplificado)",
         "zh-HK-#Hans": "Chino mandarín (Hong Kong, simplificado)",
@@ -288,40 +314,56 @@ function obtenerNombreIdioma(codigo) {
         "zh-MO-#Hant": "Chino mandarín (Macao, tradicional)",
         "zh-MY-#Hant": "Chino mandarín (Malasia, tradicional)",
         "zh-TW-#Hant": "Chino mandarín (Taiwán, tradicional)",
-
-        "as-IN": "Asamés (India)",
-        "brx-IN": "Bodo (India)",
-        "doi-IN": "Dogri (India)",
+        "bs-BA-#Cyrl": "Bosnio (alfabeto cirílico)",
+        "bs-BA-#Latn": "Bosnio (alfabeto latino)",
+        "sr-RS-#Cyrl": "Serbio (alfabeto cirílico)",
+        "sr-RS-#Latn": "Serbio (alfabeto latino)",
         "kok-IN-#Deva": "Konkani (alfabeto devanagari)",
         "kok-IN-#Latn": "Konkani (alfabeto latino)",
         "ks-IN-#Arab": "Cachemiro (alfabeto árabe)",
         "ks-IN-#Deva": "Cachemiro (alfabeto devanagari)",
-        "mai-IN": "Maithili (India)",
-        "mni-IN-#Beng": "Manipuri (alfabeto bengalí)",
-        "or-IN": "Odia (India)",
-        "pa-IN-#Guru": "Punyabí (alfabeto gurmukhi)",
-        "sa-IN": "Sánscrito (India)",
         "sat-IN-#Olck": "Santali (alfabeto ol chiki)",
         "sd-IN-#Deva": "Sindhi (alfabeto devanagari)",
-        "hi-IN-#Latn": "Hindi (alfabeto latino)",
-
-        "bs-BA-#Cyrl": "Bosnio (alfabeto cirílico)",
-        "bs-BA-#Latn": "Bosnio (alfabeto latino)",
-        "cy-GB": "Galés (Reino Unido)",
-        "jv-ID": "Javanés (Indonesia)",
-        "sr-RS-#Cyrl": "Serbio (alfabeto cirílico)",
-        "sr-RS-#Latn": "Serbio (alfabeto latino)",
+        "pa-IN-#Guru": "Punyabí (alfabeto gurmukhi)",
+        "mni-IN-#Beng": "Manipuri (alfabeto bengalí)",
         "su-ID-#Latn": "Sundanés (Indonesia)"
     };
 
-    if (nombresEspeciales[codigo]) {
-        return nombresEspeciales[codigo];
+    if (variantes[codigo]) {
+        return variantes[codigo];
     }
 
-    const codigoNormalizado = codigo.replace(/_/g, "-");
+    const normalizado = codigo.replace(/_/g, "-");
+    const base = normalizado.split("-")[0];
 
-    if (nombresIdiomas[codigoNormalizado]) {
-        return nombresIdiomas[codigoNormalizado];
+    if (nombresEspeciales[base]) {
+        const paises = {
+            IN: "India",
+            ID: "Indonesia",
+            HK: "Hong Kong",
+            CN: "China",
+            TW: "Taiwán",
+            MY: "Malasia",
+            SG: "Singapur",
+            MO: "Macao",
+            BA: "Bosnia y Herzegovina",
+            RS: "Serbia",
+            GB: "Reino Unido"
+        };
+
+        const partes = normalizado.split("-");
+        const region = partes.find(p => /^[A-Z]{2}$/.test(p));
+        const nombre = nombresEspeciales[base];
+
+        if (region && paises[region]) {
+            return `${nombre} (${paises[region]})`;
+        }
+
+        return nombre;
+    }
+
+    if (nombresIdiomas[normalizado]) {
+        return nombresIdiomas[normalizado];
     }
 
     try {
@@ -329,11 +371,12 @@ function obtenerNombreIdioma(codigo) {
             type: "language"
         });
 
-        return nombres.of(codigoNormalizado) || codigoNormalizado;
+        return nombres.of(normalizado) || normalizado;
     } catch (error) {
-        return codigoNormalizado;
+        return normalizado;
     }
 }
+
 
 
     function cargarVoces() {
