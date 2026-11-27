@@ -4897,11 +4897,36 @@ header button:hover {
         white-space: nowrap;
     }
 }
+
 @media screen and (max-width: 768px) {
-    .prueba-sigma .prueba-hero img {
-        width: 320px !important;
-        max-width: 90% !important;
+    body.prueba-sigma .prueba-hero img {
+        display: block !important;
+        width: 340px !important;
+        max-width: 95% !important;
+        min-width: 0 !important;
         height: auto !important;
-        object-fit: contain;
+        margin: 20px auto !important;
+        object-fit: contain !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body.prueba-sigma {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    .prueba-sigma > header.header,
+    .prueba-sigma main,
+    .prueba-sigma .prueba-hero {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
