@@ -275,6 +275,24 @@ if (texto && botonVoz && selectorIdioma && selectorVoz) {
         "zh-HK": "Cantonés (Hong Kong)",
         "zh-TW": "Chino mandarín (Taiwán)"
     };
+    function obtenerNombreIdioma(codigo) {
+    const codigoNormalizado = codigo.replace(/_/g, "-");
+
+    if (nombresIdiomas[codigoNormalizado]) {
+        return nombresIdiomas[codigoNormalizado];
+    }
+
+    try {
+        const nombres = new Intl.DisplayNames(["es"], {
+            type: "language"
+        });
+
+        return nombres.of(codigoNormalizado) || codigoNormalizado;
+
+    } catch (error) {
+        return codigoNormalizado;
+    }
+}
 
 
     function cargarVoces() {
@@ -298,7 +316,7 @@ if (texto && botonVoz && selectorIdioma && selectorVoz) {
             const opcion = document.createElement("option");
 
             opcion.value = idioma;
-            opcion.textContent = nombresIdiomas[idioma] || idioma;
+            opcion.textContent = obtenerNombreIdioma(idioma);
 
             selectorIdioma.appendChild(opcion);
 
