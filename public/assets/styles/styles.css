@@ -1927,7 +1927,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
     line-height: 1.5;
 }
 
-/* DISEÑO RESPONSIVO */
 
 @media (max-width: 768px) {
     .portafolio-objetivos {
@@ -1946,10 +1945,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
     }
 }
 
-
-/* =========================================
-   PAGINA NOVEDADES - SIGMA
-========================================= */
 
 .novedades-pagina {
   font-family: 'Inter', sans-serif;
@@ -4845,3 +4840,33 @@ header button:hover {
     font-size: 15px;
     padding: 11px 22px;
 }
+
+    .prueba-sigma > header.header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 10px;
+        min-height: auto;
+    }
+
+    .prueba-sigma > header.header .logo img {
+        width: 125px;
+    }
+
+    .prueba-sigma > header.header nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3px 8px;
+    }
+
+    .prueba-sigma > header.header nav a {
+        font-size: 12px;
+        padding: 5px 6px;
+    }
+
+    .prueba-sigma > header.header > button {
+        font-size: 12px;
+        padding: 7px 15px;
+    }
