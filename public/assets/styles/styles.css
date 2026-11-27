@@ -4841,6 +4841,9 @@ header button:hover {
     padding: 11px 22px;
 }
 
+
+@media screen and (max-width: 768px) {
+
     .prueba-sigma > header.header {
         flex-direction: column;
         justify-content: center;
@@ -4870,8 +4873,6 @@ header button:hover {
         font-size: 12px;
         padding: 7px 15px;
     }
-@media screen and (max-width: 768px) {
-
     .hero-contenido {
         width: 100%;
         min-width: 0;
@@ -4886,6 +4887,7 @@ header button:hover {
         justify-content: center;
         align-items: center;
         position: static;
+        box-sizing: border-box;
         width: 175px;
         max-width: 100%;
         min-height: 42px;
@@ -4894,5 +4896,5 @@ header button:hover {
         font-size: 13px;
         white-space: nowrap;
     }
-
 }
+
