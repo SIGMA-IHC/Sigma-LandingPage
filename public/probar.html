@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probar SIGMA</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+
+<body class="prueba-sigma">
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo-sigma.png" alt="SIGMA">
+            </a>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#funcionamiento">¿Cómo funciona?</a>
+            <a href="index.html#beneficios">Beneficios</a>
+            <a href="index.html#nosotros">Nosotros</a>
+            <a href="index.html#portafolio">Portafolio</a>
+            <a href="index.html#novedades">Novedades</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+
+        <button type="button" onclick="abrirLogin()">
+            Iniciar sesión
+        </button>
+
+    </header>
+    <main>
+        <section class="prueba-hero">
+
+            <div class="prueba-hero-texto">
+                <h1>Prueba <span>SIGMA</span></h1>
+
+                <p>
+                    Explora todas nuestras herramientas de comunicación
+                    inclusiva y experimenta cómo SIGMA ayuda a conectar
+                    a las personas sin barreras.
+                </p>
+            </div>
+            <div class="prueba-hero-imagen">
+                <img src="assets/images/sigma-personaje.png"
+                     alt="Aplicación SIGMA">
+            </div>
+        </section>
+        <h2 class="prueba-titulo">Traductor de señas en vivo</h2>
+
+        <section class="traductor-container">
+            <div class="prueba-panel camara-panel">
+
+                <h2>
+                    <i data-lucide="camera"></i>
+                    Captura de señas
+                </h2>
+
+                <p>Utiliza tu cámara para capturar movimientos de las manos.</p>
+
+                <div class="camara-contenido">
+
+                    <div class="camara-area">
+
+                        <div class="camara-pantalla">
+
+                            <span class="estado-camara">
+                                <span class="punto-estado"></span>
+                                EN VIVO
+                            </span>
+
+                            <video id="video-camara"
+                                   autoplay
+                                   playsinline></video>
+
+                            <p id="mensaje-camara">
+                                La cámara aparecerá aquí
+                            </p>
+
+                        </div>
+
+                        <div class="camara-botones">
+
+                            <button type="button" id="activar-camara">
+                                <i data-lucide="camera"></i>
+                                Activar cámara
+                            </button>
+
+                            <button type="button" id="capturar-foto">
+                                <i data-lucide="aperture"></i>
+                                Capturar
+                            </button>
+
+                            <button type="button" id="detener-camara">
+                                <i data-lucide="square"></i>
+                                Detener
+                            </button>
+
+                        </div>
+
+                        <canvas id="canvas-captura" hidden></canvas>
+
+                    </div>
+                    <div class="resultado-traduccion">
+
+                        <h3>
+                            <i data-lucide="message-square"></i>
+                            Traducción
+                        </h3>
+
+                        <span class="etiqueta-demostracion">
+                            Modo demostración
+                        </span>
+
+                        <div class="resultado-texto" id="resultado-sena">
+                            Esperando una seña...
+                        </div>
+
+                        <div class="confianza-traduccion">
+
+                            <div class="confianza-texto">
+                                <span>Confianza ilustrativa</span>
+                                <strong id="porcentaje-confianza">--</strong>
+                            </div>
+
+                            <div class="barra-confianza">
+                                <div id="progreso-confianza"></div>
+                            </div>
+
+                        </div>
+
+                        <button type="button" id="simular-traducción">
+                            <i data-lucide="sparkles"></i>
+                            Simular traducción
+                        </button>
+
+                        <div class="acciones-traducción">
+
+                            <button type="button" id="escuchar-resultado">
+                                <i data-lucide="volume-2"></i>
+                                Escuchar
+                            </button>
+
+                            <button type="button" id="copiar-resultado">
+                                <i data-lucide="copy"></i>
+                                Copiar
+                            </button>
+
+                            <button type="button" id="guardar-traduccion">
+                                <i data-lucide="bookmark"></i>
+                                Guardar
+                            </button>
+
+                        </div>
+
+                        <small>
+                            Resultado simulado con fines demostrativos.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="herramientas-voz">
+                <div class="prueba-panel texto-voz">
+
+                    <h2>
+                        <i data-lucide="volume-2"></i>
+                        Texto a voz
+                    </h2>
+
+                    <p>Escribe un mensaje y conviértelo en voz.</p>
+
+                    <textarea id="texto-voz"
+                              maxlength="300"
+                              placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                    <div class="contador-texto">
+                        <span id="contador-caracteres">0</span>/300
+                    </div>
+                    
+                    <div class="contador-texto">
+                    <select id="idioma-voz" aria-label="Seleccionar idioma">
+                       <option value="">Cargando idiomas...</option>
+                    </select>
+                    <select id="selector-voz" aria-label="Seleccionar voz">
+                        <option value="">Seleccionar voz</option>
+                    </select>
+                    </div>
+
+                    <button type="button" id="reproducir-voz">
+                        <i data-lucide="play"></i>
+                        Reproducir voz
+                    </button>
+                    <button type="button" id="limpiar-texto-voz">
+                    <i data-lucide="eraser"></i>
+                    Limpiar
+                </button>
+
+                </div>
+                <div class="prueba-panel panel-voz-texto">
+
+                    <h2>
+                        <i data-lucide="mic"></i>
+                        Voz a texto
+                    </h2>
+
+                    <p>Habla y convierte tus palabras en texto.</p>
+
+                    <button type="button" id="activar-microfono">
+                        <i data-lucide="mic"></i>
+                        Activar micrófono
+                    </button>
+                    <button type="button" id="limpiar-voz-texto">
+                        <i data-lucide="eraser"></i>
+                        Limpiar
+                    </button>
+
+                    <div class="ondas-voz" id="ondas-voz">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+
+                    <div class="voz-texto" id="resultado-voz">
+                        Aquí aparecerá el texto reconocido.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <h2 class="prueba-titulo">Explora nuestras herramientas</h2>
+        <section class="herramientas-grid">
+            <article class="herramienta-card">
+                <div class="herramienta-icono icono-azul-claro">
+                    <i data-lucide="image"></i>
+                </div>
+                <div>
+                    <h3>Subir imagen</h3>
+                    <p>Selecciona una fotografía de una seña.</p>
+
+                    <input type="file"
+                           id="subir-imagen"
+                           accept="image/*">
+
+                    <img id="vista-imagen"
+                         alt="Vista previa"
+                         hidden>
+                </div>
+            </article>
+            <article class="herramienta-card">
+                <div class="herramienta-icono icono-turquesa">
+                    <i data-lucide="book-open"></i>
+                </div>
+                <div>
+                    <h3>Diccionario de señas</h3>
+                    <p>Aprende el abecedario, palabras y frases comunes.</p>
+                    <a href="#diccionario">Explorar</a>
+                </div>
+            </article>
+            <article class="herramienta-card">
+
+                <div class="herramienta-icono icono-verde">
+                    <i data-lucide="history"></i>
+                </div>
+                <div>
+                    <h3>Historial</h3>
+                    <p>Consulta tus traducciones anteriores.</p>
+                    <a href="#historial">Consultar</a>
+                </div>
+
+            </article>
+
+
+            <article class="herramienta-card">
+
+                <div class="herramienta-icono icono-naranja">
+                    <i data-lucide="settings"></i>
+                </div>
+
+                <div>
+                    <h3>Accesibilidad</h3>
+                    <p>Ajusta el tamaño de letra y la visualización.</p>
+
+                    <button type="button" id="aumentar-letra">
+                        <i data-lucide="zoom-in"></i>
+                        Aumentar letra
+                    </button>
+                </div>
+
+            </article>
+
+        </section>
+        <section class="aprendizaje-guia">
+            <div class="bloque-aprendizaje" id="diccionario">
+                <div class="titulo-bloque">
+                    <div class="icono-titulo icono-azul">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h2>Aprende lengua de señas (LS)</h2>
+                        <p>Explora recursos básicos para aprender lengua de señas.</p>
+                    </div>
+                </div>
+                <div class="aprendizaje-grid">
+                    <article class="tarjeta-aprendizaje">
+                        <div class="icono-aprendizaje icono-naranja">
+                            <i data-lucide="hand"></i>
+                        </div>
+                        <h3>Abecedario</h3>
+                        <p>Aprende las letras.</p>
+                        <a href="#diccionario">Explorar ›</a>
+                    </article>
+
+                    <article class="tarjeta-aprendizaje">
+                        <div class="icono-aprendizaje icono-turquesa">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <h3>Frases frecuentes</h3>
+                        <p>Conoce expresiones comunes.</p>
+                        <a href="#diccionario">Explorar ›</a>
+                    </article>
+
+                    <article class="tarjeta-aprendizaje">
+                        <div class="icono-aprendizaje icono-verde">
+                            <i data-lucide="handshake"></i>
+                        </div>
+                        <h3>Saludos</h3>
+                        <p>Aprende a saludar.</p>
+                        <a href="#diccionario">Explorar ›</a>
+                    </article>
+
+                    <article class="tarjeta-aprendizaje">
+                        <div class="icono-aprendizaje icono-azul-claro">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Vocabulario básico</h3>
+                        <p>Descubre nuevas palabras.</p>
+                        <a href="#diccionario">Explorar ›</a>
+                    </article>
+
+                </div>
+
+            </div>
+            <div class="bloque-guia">
+
+                <div class="titulo-bloque">
+
+                    <div class="icono-titulo icono-turquesa">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <div>
+                        <h2>¿Cómo utilizar SIGMA?</h2>
+                        <p>Sigue estos pasos y prueba sus funciones.</p>
+                    </div>
+                </div>
+                <div class="pasos-guia">
+
+                    <article class="paso-guia">
+
+                        <span class="numero-paso">1</span>
+
+                        <div class="icono-paso icono-azul">
+                            <i data-lucide="camera"></i>
+                        </div>
+
+                        <h3>Elige una herramienta</h3>
+                        <p>Cámara, imagen o voz.</p>
+
+                    </article>
+
+                    <span class="flecha-paso">→</span>
+
+                    <article class="paso-guia">
+
+                        <span class="numero-paso">2</span>
+
+                        <div class="icono-paso icono-turquesa">
+                            <i data-lucide="hand"></i>
+                        </div>
+
+                        <h3>Realiza una acción</h3>
+                        <p>Realiza una seña, sube una imagen o escribe un texto.</p>
+
+                    </article>
+
+                    <span class="flecha-paso">→</span>
+
+                    <article class="paso-guia">
+
+                        <span class="numero-paso">3</span>
+
+                        <div class="icono-paso icono-verde">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+
+                        <h3>Obtén el resultado</h3>
+                        <p>Visualiza el resultado de la herramienta.</p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="prueba-panel historial-panel" id="historial">
+            <h2>
+                <i data-lucide="history"></i>
+                Historial de traducciones
+            </h2>
+            <div id="lista-historial">
+                Todavía no tienes traducciones guardadas.
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-sigma-blanco.png"
+                         alt="SIGMA">
+                </a>
+            </div>
+
+            <nav class="footer-navegacion">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#funcionamiento">¿Cómo funciona?</a>
+                <a href="index.html#beneficios">Beneficios</a>
+                <a href="index.html#nosotros">Nosotros</a>
+                <a href="index.html#portafolio">Portafolio</a>
+                <a href="index.html#novedades">Novedades</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+            <div class="footer-contacto">
+            <h3>Contáctanos</h3>
+
+            <p>
+                <i data-lucide="phone"></i>
+                +51 999 999 999
+            </p>
+
+            <p>
+                <i data-lucide="instagram"></i>
+                SIGMA.PE
+            </p>
+
+            <p>
+                <i data-lucide="facebook"></i>
+                SIGMA.PE
+            </p>
+        </div>
+
+        </div>
+
+        <div class="footer-inferior">
+            <p>© 2026 SIGMA. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+    <div id="modal-login" class="modal-login" hidden>
+
+        <div class="login-contenido"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="login-titulo">
+
+            <button type="button"
+                    class="cerrar-login"
+                    onclick="cerrarLogin()">×</button>
+
+            <img class="login-logo"
+                 src="assets/images/logo-sigma.png"
+                 alt="SIGMA">
+
+            <h2 id="login-titulo">Iniciar sesión</h2>
+            <p class="login-bienvenida">Bienvenido a SIGMA</p>
+
+            <form id="form-login">
+
+                <label for="correo">Correo electrónico</label>
+
+                <div class="campo-login">
+                    <i data-lucide="mail"></i>
+                    <input type="email"
+                           id="correo"
+                           placeholder="Ingresa tu correo"
+                           required>
+                </div>
+
+                <label for="contrasena">Contraseña</label>
+
+                <div class="campo-login">
+                    <i data-lucide="lock"></i>
+                    <input type="password"
+                           id="contrasena"
+                           placeholder="Ingresa tu contraseña"
+                           required>
+
+                    <button type="button"
+                            class="mostrar-contrasena"
+                            onclick="alternarContrasena()">
+                        <i data-lucide="eye"></i>
+                    </button>
+                </div>
+
+                <button type="submit" class="boton-ingresar">
+                    Ingresar
+                </button>
+
+            </form>
+
+            <p class="login-enlace">
+                <button type="button"
+                        class="enlace-texto"
+                        onclick="abrirRecuperacion()">
+                    ¿Olvidaste tu contraseña?
+                </button>
+            </p>
+
+            <p class="login-registro">
+                ¿No tienes cuenta?
+                <button type="button"
+                        class="enlace-texto"
+                        onclick="abrirRegistro()">
+                    Regístrate
+                </button>
+            </p>
+
+            <div class="login-aviso">
+                <i data-lucide="info"></i>
+                <p>
+                    Inicio de sesión de demostración.
+                    Próximamente estará disponible la autenticación de usuarios.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="modal-registro" class="modal-login" hidden>
+
+        <div class="login-contenido"
+             role="dialog"
+             aria-modal="true">
+
+            <button type="button"
+                    class="cerrar-login"
+                    onclick="cerrarRegistro()">×</button>
+
+            <h2>Crear una cuenta</h2>
+            <p>Bienvenido a la comunidad SIGMA.</p>
+
+            <form id="form-registro">
+
+                <label for="registro-nombre">Nombre completo</label>
+                <input type="text"
+                       id="registro-nombre"
+                       placeholder="Ingresa tu nombre"
+                       required>
+
+                <label for="registro-correo">Correo electrónico</label>
+                <input type="email"
+                       id="registro-correo"
+                       placeholder="Ingresa tu correo"
+                       required>
+
+                <label for="registro-contrasena">Contraseña</label>
+                <input type="password"
+                       id="registro-contrasena"
+                       placeholder="Crea una contraseña"
+                       minlength="8"
+                       required>
+
+                <button type="submit" class="boton-ingresar">
+                    Registrarse
+                </button>
+
+            </form>
+
+            <p>
+                ¿Ya tienes cuenta?
+                <button type="button"
+                        class="enlace-texto"
+                        onclick="volverLogin()">
+                    Inicia sesión
+                </button>
+            </p>
+
+        </div>
+
+    </div>
+    <div id="modal-recuperacion" class="modal-login" hidden>
+
+        <div class="login-contenido"
+             role="dialog"
+             aria-modal="true">
+
+            <button type="button"
+                    class="cerrar-login"
+                    onclick="cerrarRecuperacion()">×</button>
+
+            <h2>Recuperar contraseña</h2>
+
+            <p>
+                Ingresa tu correo electrónico para solicitar
+                la recuperación de tu cuenta.
+            </p>
+
+            <form id="form-recuperacion">
+
+                <label for="recuperacion-correo">
+                    Correo electrónico
+                </label>
+
+                <input type="email"
+                       id="recuperacion-correo"
+                       placeholder="Ingresa tu correo"
+                       required>
+
+                <button type="submit" class="boton-ingresar">
+                    Recuperar contraseña
+                </button>
+
+            </form>
+
+            <button type="button"
+                    class="enlace-texto"
+                    onclick="volverDesdeRecuperacion()">
+                Volver a iniciar sesión
+            </button>
+
+        </div>
+
+    </div>
+    <script src="assets/scripts/main.js"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
