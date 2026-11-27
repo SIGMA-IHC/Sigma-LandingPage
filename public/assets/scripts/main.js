@@ -275,7 +275,49 @@ if (texto && botonVoz && selectorIdioma && selectorVoz) {
         "zh-HK": "Cantonés (Hong Kong)",
         "zh-TW": "Chino mandarín (Taiwán)"
     };
-    function obtenerNombreIdioma(codigo) {
+    
+function obtenerNombreIdioma(codigo) {
+    const nombresEspeciales = {
+        "yue-HK-#Hant": "Cantonés (Hong Kong)",
+        "zh-CN-#Hans": "Chino mandarín (China, simplificado)",
+        "zh-HK-#Hans": "Chino mandarín (Hong Kong, simplificado)",
+        "zh-MO-#Hans": "Chino mandarín (Macao, simplificado)",
+        "zh-MY-#Hans": "Chino mandarín (Malasia, simplificado)",
+        "zh-SG-#Hans": "Chino mandarín (Singapur, simplificado)",
+        "zh-HK-#Hant": "Chino mandarín (Hong Kong, tradicional)",
+        "zh-MO-#Hant": "Chino mandarín (Macao, tradicional)",
+        "zh-MY-#Hant": "Chino mandarín (Malasia, tradicional)",
+        "zh-TW-#Hant": "Chino mandarín (Taiwán, tradicional)",
+
+        "as-IN": "Asamés (India)",
+        "brx-IN": "Bodo (India)",
+        "doi-IN": "Dogri (India)",
+        "kok-IN-#Deva": "Konkani (alfabeto devanagari)",
+        "kok-IN-#Latn": "Konkani (alfabeto latino)",
+        "ks-IN-#Arab": "Cachemiro (alfabeto árabe)",
+        "ks-IN-#Deva": "Cachemiro (alfabeto devanagari)",
+        "mai-IN": "Maithili (India)",
+        "mni-IN-#Beng": "Manipuri (alfabeto bengalí)",
+        "or-IN": "Odia (India)",
+        "pa-IN-#Guru": "Punyabí (alfabeto gurmukhi)",
+        "sa-IN": "Sánscrito (India)",
+        "sat-IN-#Olck": "Santali (alfabeto ol chiki)",
+        "sd-IN-#Deva": "Sindhi (alfabeto devanagari)",
+        "hi-IN-#Latn": "Hindi (alfabeto latino)",
+
+        "bs-BA-#Cyrl": "Bosnio (alfabeto cirílico)",
+        "bs-BA-#Latn": "Bosnio (alfabeto latino)",
+        "cy-GB": "Galés (Reino Unido)",
+        "jv-ID": "Javanés (Indonesia)",
+        "sr-RS-#Cyrl": "Serbio (alfabeto cirílico)",
+        "sr-RS-#Latn": "Serbio (alfabeto latino)",
+        "su-ID-#Latn": "Sundanés (Indonesia)"
+    };
+
+    if (nombresEspeciales[codigo]) {
+        return nombresEspeciales[codigo];
+    }
+
     const codigoNormalizado = codigo.replace(/_/g, "-");
 
     if (nombresIdiomas[codigoNormalizado]) {
@@ -288,7 +330,6 @@ if (texto && botonVoz && selectorIdioma && selectorVoz) {
         });
 
         return nombres.of(codigoNormalizado) || codigoNormalizado;
-
     } catch (error) {
         return codigoNormalizado;
     }
