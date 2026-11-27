@@ -4870,3 +4870,29 @@ header button:hover {
         font-size: 12px;
         padding: 7px 15px;
     }
+@media screen and (max-width: 768px) {
+
+    .hero-contenido {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero .boton-probar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        width: 175px;
+        max-width: 100%;
+        min-height: 42px;
+        margin: 7px auto;
+        padding: 10px 15px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+}
