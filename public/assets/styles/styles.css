@@ -4716,7 +4716,7 @@ header button:hover {
     background-color: #20A99A !important;
     color: #ffffff !important;
     border: none !important;
-    margin: 0;
+    margin: 5px 6px 5px 0;
 }
 
 #escuchar-resultado:hover,
